@@ -1,5 +1,6 @@
 package math.droid.p.completecalc;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -15,6 +16,15 @@ public class MainActivity extends AppCompatActivity {
 
     private boolean isOperator(char c) {
         return c == '+' || c == '-' || c == '*' || c == '/';
+    }
+
+    @NonNull
+    private String FormatResult(String s){
+        double value = Double.parseDouble(s);
+        if(value % 1 ==0) {
+            return String.valueOf((int) value);
+        }
+        return String.valueOf(value);
     }
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -122,20 +132,15 @@ public class MainActivity extends AppCompatActivity {
         findViewById(R.id.btnBack).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if (hasResult) {
-                    currentInput = "";
-                    operator = "";
-                    operand1 = 0;
-                    etDisplay.setText("");
-                    hasResult = false;
-                } else if (!currentInput.isEmpty()) {
+                if (!currentInput.isEmpty()) {
                     char lastChar = currentInput.charAt(currentInput.length() - 1);
                     currentInput = currentInput.substring(0, currentInput.length() - 1);
                     etDisplay.setText(currentInput);
-
                     if (isOperator(lastChar)) {
-                        operator = ""; // Limpa o operador se o último caractere era um operador
+                        operator = ""; // Remove o operador se o último caractere era um operador
                     }
+                    // Se o usuário apagar o operador, podemos considerar que o resultado não está mais "fixo"
+                    hasResult = false;
                 }
             }
         });
@@ -152,7 +157,7 @@ public class MainActivity extends AppCompatActivity {
                         String secondOperandStr = currentInput.substring(opIndex + 1);
                         try {
                             double operand2 = Double.parseDouble(secondOperandStr);
-                            double result = 0;
+                            String result = String.valueOf(0);
                             // Impede divisão por zero
                             if (operator.equals("/") && operand2 == 0) {
                                 etDisplay.setText(getString(R.string.error));
@@ -163,18 +168,19 @@ public class MainActivity extends AppCompatActivity {
                             }
                             switch (operator) {
                                 case "+":
-                                    result = operand1 + operand2;
+                                    result = String.valueOf( operand1 + operand2);
                                     break;
                                 case "-":
-                                    result = operand1 - operand2;
+                                    result = String.valueOf(operand1 - operand2);
                                     break;
                                 case "*":
-                                    result = operand1 * operand2;
+                                    result = String.valueOf(operand1 * operand2);
                                     break;
                                 case "/":
-                                    result = operand1 / operand2;
+                                    result = String.valueOf(operand1 / operand2);
                                     break;
                             }
+                            result = FormatResult(result);
                             etDisplay.setText(String.valueOf(result));
                             // O resultado pode ser reutilizado em uma nova operação
                             currentInput = String.valueOf(result);
