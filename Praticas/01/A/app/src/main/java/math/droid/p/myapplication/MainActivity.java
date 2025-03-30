@@ -42,6 +42,11 @@ public class MainActivity extends AppCompatActivity {
     public void dividir(View view) {
         int v1 = Integer.parseInt(n1.getText().toString());
         int v2 = Integer.parseInt(n2.getText().toString());
-        res.setText(String.valueOf((float)v1/v2));
+        if (v2 == 0) {
+            res.setText(getString(R.string.division_by_zero));
+        } else {
+            res.setText(String.valueOf((float) v1 / v2));
+        }
     }
+
 }

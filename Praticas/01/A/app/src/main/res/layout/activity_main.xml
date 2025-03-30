@@ -12,11 +12,13 @@
         android:layout_height="match_parent">
 
         <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_width="364dp"
+            android:layout_height="725dp"
             android:orientation="vertical"
-            tools:layout_editor_absoluteX="0dp"
-            tools:layout_editor_absoluteY="0dp">
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -32,7 +34,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:rotationX="0"
-                    android:text="Valor 1:"
+                    android:text="@string/valor1_label"
                     android:textSize="20sp" />
 
                 <EditText
@@ -41,7 +43,8 @@
                     android:layout_height="wrap_content"
                     android:ems="10"
                     android:inputType="number"
-                    android:textSize="20sp" />
+                    android:textSize="20sp"
+                    android:hint="@string/n1_hint" />
 
                 <Space
                     android:layout_width="match_parent"
@@ -51,7 +54,7 @@
                     android:id="@+id/textView17"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Valor 2:"
+                    android:text="@string/valor2_label"
                     android:textSize="20sp" />
 
                 <EditText
@@ -60,7 +63,8 @@
                     android:layout_height="wrap_content"
                     android:ems="10"
                     android:inputType="number"
-                    android:textSize="20sp" />
+                    android:textSize="20sp"
+                    android:hint="@string/n2_hint" />
             </LinearLayout>
 
             <LinearLayout
@@ -69,7 +73,7 @@
                 android:orientation="horizontal">
 
                 <Space
-                    android:layout_width="35dp"
+                    android:layout_width="17dp"
                     android:layout_height="50dp"
                     android:layout_weight="0" />
 
@@ -79,7 +83,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="0"
                     android:onClick="somar"
-                    android:text="+" />
+                    android:text="@string/plus_sign" />
 
                 <Space
                     android:layout_width="20dp"
@@ -87,15 +91,15 @@
                     android:layout_weight="0" />
 
                 <Button
-                    android:id="@+id/subtr"
+                    android:id="@+id/sub"
                     android:layout_width="60dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="0"
                     android:onClick="subtrair"
-                    android:text="-" />
+                    android:text="@string/sub_sign" />
 
                 <Space
-                    android:layout_width="57dp"
+                    android:layout_width="47dp"
                     android:layout_height="50dp"
                     android:layout_weight="0" />
 
@@ -105,7 +109,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="0"
                     android:onClick="multiplicar"
-                    android:text="*" />
+                    android:text="@string/multi_sign" />
 
                 <Space
                     android:layout_width="20dp"
@@ -113,15 +117,15 @@
                     android:layout_weight="0" />
 
                 <Button
-                    android:id="@+id/divi"
+                    android:id="@+id/div"
                     android:layout_width="60dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="0"
                     android:onClick="dividir"
-                    android:text="/" />
+                    android:text="@string/div_sign" />
 
                 <Space
-                    android:layout_width="35dp"
+                    android:layout_width="16dp"
                     android:layout_height="50dp"
                     android:layout_weight="0" />
 
@@ -146,7 +150,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
-                android:text="O resultado é:"
+                android:text="@string/res_label"
                 android:textSize="20sp" />
 
             <TextView
