@@ -1,4 +1,9 @@
 <resources>
     <string name="app_name">My Application</string>
-    <string name=""
+    <string name="nome_label">Nome:</string>
+    <string name="nutri_info">Relatório Nutricional</string>
+    <string name="peso_label">Peso(kg):</string>
+    <string name="idade_label">Idade:</string>
+    <string name="altura_label">Altura(m):</string>
+
 </resources>
