@@ -1,9 +1,14 @@
 <resources>
     <string name="app_name">My Application</string>
     <string name="nome_label">Nome:</string>
+    <string name="nome_hint">Informe seu nome</string>
     <string name="nutri_info">Relatório Nutricional</string>
-    <string name="peso_label">Peso(kg):</string>
+    <string name="peso_label">Peso (kg):</string>
+    <string name="peso_hint">Informe seu peso em kg</string>
     <string name="idade_label">Idade:</string>
-    <string name="altura_label">Altura(m):</string>
-
+    <string name="idade_hint">Informe sua idade</string>
+    <string name="altura_label">Altura (m):</string>
+    <string name="altura_hint">Informe sua altura em metros</string>
+    <string name="relat_rio_nutricional">Relatório Nutricional</string>
+    <string name="voltar">Voltar</string>
 </resources>

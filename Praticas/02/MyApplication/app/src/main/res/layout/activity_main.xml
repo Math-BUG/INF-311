@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
@@ -26,90 +27,109 @@
                 android:layout_height="135dp" />
 
             <TextView
-                android:id="@+id/textView4"
+                android:id="@+id/tvNomeLabel"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/nome_label"
+                android:hint="@string/nome_hint"
                 android:textSize="16sp" />
 
             <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tilNome"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                android:hint="@string/nome_hint">
 
                 <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etNome"
                     android:layout_width="match_parent"
-                    android:layout_height="40dp" />
-
-                <Space
-                    android:layout_width="match_parent"
-                    android:layout_height="35dp" />
+                    android:layout_height="50dp"
+                    android:inputType="textPersonName" />
             </com.google.android.material.textfield.TextInputLayout>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="35dp" />
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="25dp"
                 android:orientation="horizontal">
 
                 <TextView
-                    android:id="@+id/textView8"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:id="@+id/tvIdadeLabel"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
                     android:layout_weight="1"
+                    android:hint="@string/idade_hint"
                     android:text="@string/idade_label"
                     android:textSize="16sp" />
 
                 <TextView
-                    android:id="@+id/textView9"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:id="@+id/tvPesoLabel"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
                     android:layout_weight="1"
+                    android:hint="@string/peso_hint"
                     android:text="@string/peso_label"
                     android:textSize="16sp" />
 
                 <TextView
-                    android:id="@+id/textView10"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:id="@+id/tvAlturaLabel"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
                     android:layout_weight="1"
+                    android:hint="@string/altura_hint"
                     android:text="@string/altura_label"
                     android:textSize="16sp" />
-
             </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="88dp"
+                android:layout_height="wrap_content"
                 android:baselineAligned="false"
                 android:orientation="horizontal">
 
                 <com.google.android.material.textfield.TextInputLayout
-                    android:layout_width="100dp"
+                    android:id="@+id/tilIdade"
+                    android:layout_width="0dp"
                     android:layout_height="match_parent"
-                    android:layout_weight="0">
+                    android:layout_weight="1"
+                    android:hint="@string/idade_hint">
 
                     <com.google.android.material.textfield.TextInputEditText
-                        android:layout_width="80dp"
-                        android:layout_height="40dp" />
-                </com.google.android.material.textfield.TextInputLayout>
-
-                <com.google.android.material.textfield.TextInputLayout
-                    android:layout_width="129dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="0">
-
-                    <com.google.android.material.textfield.TextInputEditText
-                        android:layout_width="108dp"
-                        android:layout_height="40dp" />
-                </com.google.android.material.textfield.TextInputLayout>
-
-                <com.google.android.material.textfield.TextInputLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_weight="0">
-
-                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/etIdade"
                         android:layout_width="match_parent"
-                        android:layout_height="40dp" />
+                        android:layout_height="50dp"
+                        android:inputType="number" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tilPeso"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:hint="@string/peso_hint">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/etPeso"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:inputType="numberDecimal" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tilAltura"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:hint="@string/altura_hint">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/etAltura"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:inputType="numberDecimal" />
                 </com.google.android.material.textfield.TextInputLayout>
 
             </LinearLayout>
