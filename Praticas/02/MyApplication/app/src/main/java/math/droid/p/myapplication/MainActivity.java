@@ -17,7 +17,6 @@ import com.google.android.material.textfield.TextInputLayout;
 public class MainActivity extends AppCompatActivity {
 
     private TextInputEditText etNome, etIdade, etPeso, etAltura;
-    private TextInputLayout tilNome, tilIdade, tilPeso, tilAltura;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,10 +30,6 @@ public class MainActivity extends AppCompatActivity {
             return insets;
         });
 
-        tilNome = findViewById(R.id.tilNome);
-        tilIdade = findViewById(R.id.tilIdade);
-        tilPeso = findViewById(R.id.tilPeso);
-        tilAltura = findViewById(R.id.tilAltura);
 
         etNome = findViewById(R.id.etNome);
         etIdade = findViewById(R.id.etIdade);
