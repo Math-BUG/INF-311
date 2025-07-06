@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="categories">
+        <item>Restaurante</item>
+        <item>Bar</item>
+        <item>Cinema</item>
+        <item>Universidade</item>
+        <item>Estádio</item>
+        <item>Parque</item>
+        <item>Outros</item>
+    </string-array>
+</resources>
